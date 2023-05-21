@@ -33,7 +33,7 @@ jobs:
       --health-timeout 5s 
       --health-retries 5
 
-    # If you want to test multiple python version(s)
+    # If you want to test multiple python version(s)ер
     strategy:
       matrix:
         python-version: [3.9]
