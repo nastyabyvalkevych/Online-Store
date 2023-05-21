@@ -18,17 +18,13 @@ jobs:
     services:
       postgres_main:
         image: postgres:12
-        env:
-          POSTGRES_USER: ${{ env.POSTGRES_USER }}
-          -e POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
-          POSTGRES_DB: ${{ env.POSTGRES_DB }}
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready 
-          --health-interval 10s 
-          --health-timeout 5s 
-          --health-retries 5
+      env:
+          POSTGRES_HOST_AUTH_METHOD=trust
+      options: >-
+        --health-cmd pg_isready 
+        --health-interval 10s 
+        --health-timeout 5s 
+        --health-retries 5
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
