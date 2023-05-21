@@ -33,8 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
 
     'main',
-
-
+    'jet.dashboard',
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
