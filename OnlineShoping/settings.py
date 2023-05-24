@@ -40,8 +40,7 @@ ALLOWED_HOSTS = ['perfume.herokuapp.com']
 INSTALLED_APPS = [
 
     'main',
-    'jet.dashboard',
-    'jet',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
